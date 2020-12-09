@@ -29,17 +29,17 @@ module.exports = {
     .clearValue('#value')
     .setValue('#value', '0000')
     .click('*[data-id="remixDRValueLabel"]')
-    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result.value, "0") })
     .setValue('#value', '0000')
-    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result.value, "0") })
     .clearValue('#value')
     .setValue('#value', '-44')
-    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result.value, "0") })
     .clearValue('#value')
     .setValue('#value', '')
-    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result.value, "0") })
     .setValue('#value', 'dragon')
-    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result.value, "0") })
   },
 
   'Should sign message using account key': function (browser: NightwatchBrowser) {

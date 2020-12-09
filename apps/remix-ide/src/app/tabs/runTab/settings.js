@@ -137,7 +137,7 @@ class SettingsUI {
 
     const valueEl = yo`
       <div class="${css.crow}">
-        <label class="${css.settingsLabel}">Value</label>
+        <label class="${css.settingsLabel}" data-id="remixDRValueLabel">Value</label>
         <div class="${css.gasValueContainer}">
           <input
             type="number"

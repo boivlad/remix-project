@@ -29,15 +29,17 @@ module.exports = {
     .clearValue('#value')
     .setValue('#value', '0000')
     .click('*[data-id="remixDRValueLabel"]')
-    .assert.containsText('*[data-id="dandrValue"]', '0')
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
+    .setValue('#value', '0000')
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
     .clearValue('#value')
     .setValue('#value', '-44')
-    .assert.containsText('*[data-id="dandrValue"]', '0')
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
     .clearValue('#value')
     .setValue('#value', '')
-    .assert.containsText('*[data-id="dandrValue"]', '0')
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
     .setValue('#value', 'dragon')
-    .assert.containsText('*[data-id="dandrValue"]', '0')
+    .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result, "0") })
   },
 
   'Should sign message using account key': function (browser: NightwatchBrowser) {

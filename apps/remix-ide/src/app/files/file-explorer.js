@@ -562,7 +562,17 @@ fileExplorer.prototype.toGist = function (id) {
             public: true,
             files: packaged
           }, (error, result) => {
-            proccedResult(error, result)
+            if(error){
+              proccedResult(error, result)
+            }else{
+              gists.edit({
+                description: description + result.id,
+                public: true,
+                files: packaged
+             }, (error, result) => {
+                proccedResult(error, result)
+              })
+            }
           })
         }
       }

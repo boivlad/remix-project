@@ -134,7 +134,7 @@ class SettingsUI {
         <input type="number" class="form-control ${css.gasNval} ${css.col2}" id="gasLimit" value="3000000">
       </div>
     `
-    
+
     const valueEl = yo`
       <div class="${css.crow}">
         <label class="${css.settingsLabel}" data-id="remixDRValueLabel">Value</label>

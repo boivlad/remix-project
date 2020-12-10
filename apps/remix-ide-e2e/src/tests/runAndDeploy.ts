@@ -29,7 +29,7 @@ module.exports = {
     .clearValue('#value')
     .setValue('#value', '0000')
     .click('*[data-id="remixDRValueLabel"]')
-    .getValue('*[data-id="dandrValue"]', function(result) { console.log("res=", result); this.assert.equal(result.value, "0") })
+    .getValue('#value', function(result) { console.log("res=", result); this.assert.equal(result.value, "0") })
     .setValue('#value', '0000')
     .getValue('*[data-id="dandrValue"]', function(result) { this.assert.equal(result.value, "0") })
     .clearValue('#value')
